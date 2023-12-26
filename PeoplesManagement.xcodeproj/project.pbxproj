@@ -19,6 +19,7 @@
 		BB4415602AFBF65B00AA675E /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44155F2AFBF65B00AA675E /* APIEndpoint.swift */; };
 		BB4415632AFBFB1F00AA675E /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4415622AFBFB1F00AA675E /* PeopleCell.swift */; };
 		BB4415662AFBFBB800AA675E /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4415652AFBFBB800AA675E /* PeopleViewModel.swift */; };
+		BB9B8DE62B34866800CE9861 /* PeopleDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B8DE52B34866800CE9861 /* PeopleDataRepository.swift */; };
 		BBA070502AFE7A3B00948B0B /* PeopleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0704F2AFE7A3B00948B0B /* PeopleViewModelTests.swift */; };
 		BBA070522AFE7CEB00948B0B /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA070512AFE7CEB00948B0B /* FakeNetworkManager.swift */; };
 		BBA070552AFE7DCB00948B0B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA070542AFE7DCB00948B0B /* NetworkError.swift */; };
@@ -62,6 +63,7 @@
 		BB44155F2AFBF65B00AA675E /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		BB4415622AFBFB1F00AA675E /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		BB4415652AFBFBB800AA675E /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		BB9B8DE52B34866800CE9861 /* PeopleDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDataRepository.swift; sourceTree = "<group>"; };
 		BBA0704F2AFE7A3B00948B0B /* PeopleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTests.swift; sourceTree = "<group>"; };
 		BBA070512AFE7CEB00948B0B /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 		BBA070542AFE7DCB00948B0B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -120,15 +122,16 @@
 		BB44152C2AFBF2C700AA675E /* PeoplesManagement */ = {
 			isa = PBXGroup;
 			children = (
-				BBC2BF962B11068D00502399 /* Coordinator */,
-				BBA070532AFE7DC200948B0B /* Enums */,
-				BB4415642AFBFB8200AA675E /* ViewModel */,
-				BB4415612AFBF90300AA675E /* View */,
-				BB44155C2AFBF3AD00AA675E /* NetworkManager */,
-				BB4415572AFBF2DA00AA675E /* Model */,
 				BB44152D2AFBF2C700AA675E /* PeoplesManagementApp.swift */,
 				BB4415312AFBF2C800AA675E /* Assets.xcassets */,
+				BBC2BF962B11068D00502399 /* Coordinator */,
+				BBA070532AFE7DC200948B0B /* Enums */,
+				BB4415572AFBF2DA00AA675E /* Model */,
+				BB44155C2AFBF3AD00AA675E /* NetworkManager */,
 				BB4415332AFBF2C800AA675E /* Preview Content */,
+				BB9B8DE42B34865200CE9861 /* Repository */,
+				BB4415612AFBF90300AA675E /* View */,
+				BB4415642AFBFB8200AA675E /* ViewModel */,
 			);
 			path = PeoplesManagement;
 			sourceTree = "<group>";
@@ -196,6 +199,14 @@
 				BB4415652AFBFBB800AA675E /* PeopleViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB9B8DE42B34865200CE9861 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BB9B8DE52B34866800CE9861 /* PeopleDataRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		BBA070532AFE7DC200948B0B /* Enums */ = {
@@ -347,6 +358,7 @@
 			files = (
 				BBC2BF9D2B110BF900502399 /* GridScreen.swift in Sources */,
 				BB44155E2AFBF3B800AA675E /* NetworkManager.swift in Sources */,
+				BB9B8DE62B34866800CE9861 /* PeopleDataRepository.swift in Sources */,
 				BBC2BF9B2B11075900502399 /* StartView.swift in Sources */,
 				BBA070552AFE7DCB00948B0B /* NetworkError.swift in Sources */,
 				BB4415302AFBF2C700AA675E /* PeopleListView.swift in Sources */,

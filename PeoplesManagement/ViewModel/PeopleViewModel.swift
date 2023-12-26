@@ -12,21 +12,16 @@ class PeopleViewModel: ObservableObject {
     @Published var people: [People] = []
     @Published var isErrorOccured: Bool = false
     var customError: NetworkError?
-    var manager: Networking
+    var repository: PeopleDataRepositoryActions
     
-    init(manager: Networking = NetworkManager()) {
-        self.manager = manager
+    init(repository: PeopleDataRepositoryActions = PeopleDataRepository()) {
+        self.repository = repository
     }
     
     func getDataFromViewModel(urlString: String) async {
-        guard let url = URL(string: urlString) else {
-            customError = NetworkError.badUrl
-            return
-        }
         do {
-            if let peopleData = try await manager.getDataFromNetworkLayer(url: url, type: [People].self) {
-                self.people = peopleData
-            }
+            
+            self.people = try await self.repository.getListOfPeople()
         } catch {
             
             switch error {

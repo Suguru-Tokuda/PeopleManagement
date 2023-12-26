@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PeopleListView: View {
-    @StateObject var vm = PeopleViewModel()
+    @StateObject var vm = PeopleViewModel(repository: PeopleDataRepository())
     @EnvironmentObject var mainCoordinator: MainCoordinator
     
     var body: some View {
